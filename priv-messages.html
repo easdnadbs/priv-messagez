@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Messages</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            background: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            width: 100vw;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            width: 90%;
+            max-width: 800px;
+            border: 1px solid #ccc;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 10px;
+        }
+        input[type="text"], input[type="password"], textarea {
+            padding: 12px;
+            margin: 15px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #333;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        #message-output {
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 90%;
+            max-width: 800px;
+            min-height: 100px;
+        }
+
+        .ads {
+            background: #fff;
+            padding: 20px;
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+        }
+
+        .ads-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .ads-right {
+            top: 10px;
+            right: 10px;
+        }
+
+        .made-by {
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="ads ads-left">
+        <h2>🚀 3D Prints by Blackthrush!</h2>
+        <p>Custom designs, prototypes, and more! Text us to order.</p>
+        <p>🎨 Check out our designs now!</p>
+    </div>
+
+    <div class="ads ads-right">
+        <h2>🎨 Create Your Own 3D Prints!</h2>
+        <p>We use X1C Carbon to bring your ideas to life!</p>
+        <p>Message us for custom 3D prints! 📱</p>
+    </div>
+
+    <h1>Private Message System</h1>
+
+    <div id="user-container" class="container">
+
+        <div>
+            <label for="name">Enter your name (optional): </label>
+            <input type="text" id="name" placeholder="Name (optional)">
+        </div>
+        <div>
+            <label for="password">Enter your password: </label>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+
+        <button onclick="viewMessage()">View Message</button>
+
+        <div>
+            <label for="send-message">Send Message to Lonan: </label>
+            <textarea id="send-message" placeholder="Write your message here..."></textarea>
+        </div>
+
+        <div>
+            <label for="sender-name">Your Name (optional): </label>
+            <input type="text" id="sender-name" placeholder="Your name here">
+        </div>
+
+        <button onclick="sendMessage()">Send Message</button>
+
+    </div>
+
+    <div id="message-output">Your message will appear here...</div>
+
+    <div class="made-by">Made by Lonan</div>
+
+</body>
+</html>
